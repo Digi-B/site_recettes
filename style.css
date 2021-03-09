@@ -1,7 +1,3 @@
-
-
-
-
 body {
   background-color: #8ba1bb;
   font-family: arial, helvetica, sans-serif;
@@ -32,8 +28,8 @@ p.categorie {
 
 div.contenu {
   background-color: white;
-  margin: 60px 10% 80px 10%;
-  padding: 0 30px 30px 30px;
+  margin: 40px 8px 80px 8px;
+  padding: 0 8px 20px 8px;
 
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 0px 0px 8px 10px rgba(0, 0, 0, 0.1);
@@ -70,18 +66,18 @@ table.info {
   width: 100%;
   color: white;
   background-color: #6c829dc0;
-  height: 80px;
+  height: 50px;
 }
 
 /* Dans les    table  qui contiennent la classe info   , on prend tous les td  */
 table.info td {
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   vertical-align: top;
 }
 
 table.info th {
-  font-size: 16px;
+  font-size: 14px;
   vertical-align: bottom;
   padding-bottom: 8px;
 }
@@ -94,18 +90,22 @@ img.info {
   background-color: lightgray;
 }
 
+/* 
+-----------------------------------
+Colonnes
+
+*/
 
 div.colonnes {
-    overflow: auto ;
+  overflow: auto;
 }
-
 
 div.colonne1,
 div.colonne2 {
 }
 
 div.colonne {
-  width: 45%;
+  width: 100%;
   margin-top: 20px;
 }
 
@@ -115,15 +115,6 @@ div.colonne h2 {
   font-size: 15px;
   border-bottom: 5px solid #6c829d;
   padding-bottom: 5px;
-}
-
-div.colonne1 {
-  display: inline-block;
-  margin-right: 10%;
-}
-
-div.colonne2 {
-  float: right;
 }
 
 div.ingredients p {
@@ -160,4 +151,65 @@ table.preparation td.preparation_etape {
 
 table.preparation tr {
   height: 40px;
+}
+
+/* 
+----------------------------------------------------------------
+
+ORDINATEURS
+
+----------------------------------------------------------------
+
+*/
+
+@media only screen and (min-width: 768px) {
+  div.contenu {
+    min-width: 350px;
+    margin: 60px 10% 80px 10%;
+    padding: 0 30px 30px 30px;
+  }
+
+  table.info {
+    height: 80px;
+  }
+
+  /* Dans les    table  qui contiennent la classe info   , on prend tous les td  */
+  table.info td {
+    font-size: 14px;
+  }
+
+  table.info th {
+    font-size: 16px;
+  }
+
+  /* 
+-----------------------------------
+Colonnes
+
+*/
+  div.colonne {
+    width: 45%;
+  }
+
+  div.colonne1 {
+    display: inline-block;
+    margin-right: 10%;
+  }
+
+  div.colonne2 {
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  div.contenu {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30px 30px 30px;
+
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 0px 8px 10px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+  }
 }
